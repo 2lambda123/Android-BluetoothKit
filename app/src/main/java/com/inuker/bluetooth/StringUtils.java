@@ -4,6 +4,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
@@ -14,7 +15,7 @@ import java.util.Random;
  */
 public class StringUtils {
 
-    private static Random rnd = new Random();
+    private static Random rnd = new SecureRandom();
 
     public static String toMd5(String src) {
         try {
