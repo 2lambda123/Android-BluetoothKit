@@ -1,5 +1,6 @@
 package com.inuker.bluetooth.library.utils;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 /**
@@ -11,7 +12,7 @@ public class RandomUtils {
 
     public static double randFloat() {
         if (mRandom == null) {
-            mRandom = new Random();
+            mRandom = new SecureRandom();
             mRandom.setSeed(System.currentTimeMillis());
         }
         return mRandom.nextDouble();
